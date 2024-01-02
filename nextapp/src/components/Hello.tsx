@@ -15,6 +15,7 @@ const HelloBtn = () => {
 
             const data = await response.json(); // Parse JSON response
             console.log(data); // Access fetched data
+            console.log(response.status); // Access HTTP status
             setHello(data.hello);
             return data.hello;
         } catch (error) {

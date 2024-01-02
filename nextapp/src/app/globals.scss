@@ -25,3 +25,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+$primary-color: #336699;
+
+button {
+  background-color: $primary-color;
+  padding: 1rem;
+  border-radius: 50px;
+}
