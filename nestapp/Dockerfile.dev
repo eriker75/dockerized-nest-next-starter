@@ -1,0 +1,16 @@
+# Base Image
+FROM node:20
+
+# Directorio de trabajo
+WORKDIR /app
+
+# Instalación de dependencias
+COPY package*.json ./
+RUN npm install
+
+# Copiar archivos de la aplicación
+COPY . .
+
+# Puerto de exposición y comando para iniciar la aplicación
+EXPOSE 3000
+CMD ["npm", "run", "start:dev"]
